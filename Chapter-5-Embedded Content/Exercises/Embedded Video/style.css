@@ -1,0 +1,34 @@
+/* STYLING THE HTML AND BODY TO FILL VIEWPORT AND CENTER CONTENT */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* VIDEO CONTAINER TO CONTROL SIZE */
+.video-container {
+  max-width: 81%;
+  max-height: 81%;
+  width: 100%;
+  height: 100%;
+  /* optional: add box-shadow or border-radius for style */
+}
+
+/* VIDEO ELEMENT SIZING AND FIT */
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* Removed 'right: 20%' because it's unnecessary and can cause layout issues */
+}
+
+/* OPTIONAL: Make sure poster image covers entire viewport */
+video[poster] {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* To cover entire viewport with poster */
+}
